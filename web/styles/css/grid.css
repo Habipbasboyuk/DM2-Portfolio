@@ -1,0 +1,39 @@
+@media (min-width: 50rem) {
+    main:not(.contact-page) .container {
+      margin-top: 3rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+    }
+  
+    main:not(.contact-page) .header {
+      grid-column: 1 / 2;
+    }
+  
+    main:not(.contact-page) .grid-article1 {
+      grid-column: 1 / 2;
+    }
+  
+    main:not(.contact-page) .grid-article2 {
+      grid-column: 2 / span 1;
+      grid-row: 1 / span 2;
+    }
+  
+    main.contact-page .container {
+        margin-top: 3rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    main.contact-page .grid-article1,
+    main.contact-page .grid-article2 {
+
+        align-self: stretch;
+    }
+
+    main.contact-page .grid-header {
+        grid-column: 1 / 3;
+    }
+
+}
+  

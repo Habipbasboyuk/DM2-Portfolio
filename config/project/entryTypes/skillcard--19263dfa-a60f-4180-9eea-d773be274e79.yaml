@@ -1,0 +1,67 @@
+color: null
+fieldLayouts:
+  04f2dac1-281f-41a0-9914-2f5b04413463:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            dateAdded: '2025-03-12T11:02:08+00:00'
+            disabled: false
+            elementCondition: null
+            id: null
+            includeInCards: false
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            providesThumbs: false
+            readonly: false
+            required: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 10ec7b33-a026-43d7-ad5f-2d694b01a2fa
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-03-12T11:03:32+00:00'
+            elementCondition: null
+            fieldUid: 23e6ccab-3f69-4063-b0a4-14e0a251fdef # Image
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: b5b9dfd8-a947-4e9f-891a-9ff9f9db70bd
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 969c0679-d46a-4224-b03b-b468927a9ec8
+        userCondition: null
+handle: skillcard
+hasTitleField: true
+icon: null
+name: skillCard
+showSlugField: true
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

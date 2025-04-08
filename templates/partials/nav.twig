@@ -1,0 +1,13 @@
+<nav class="navbar">
+    <ul class="navbar__list">
+        {% set nav = craft.entries.section('navigation').all() %}
+        {% for item in nav %}
+        {% set image = item.image.one() %}
+        {% if image %}
+        <li class="navbar__list-item"><img src="{{ image.url }}" alt="{{ image.title }}"></li>
+        {% else %}
+        <li class="navbar__list-item"><a href="{{item.navigationItem}}">{{ item.title }}</a></li>
+        {% endif %}
+        {% endfor %}
+    </ul>
+</nav>

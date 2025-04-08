@@ -1,0 +1,5 @@
+.detail-container__article {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+}

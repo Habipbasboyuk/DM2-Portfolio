@@ -1,0 +1,20 @@
+{% extends '_layouts/base' %}
+
+{% block content %}
+
+    <section class="container">
+        <article class="container__article header detail-container__article">
+            <h1 class="article__title article__title--big">{{ entry.title }}</h1>
+
+            <p class="article__text">{{(entry.richText)}}</p>
+        </article>
+
+        {% if entry.image|length %}
+            <article class="container__article container__article--card ">
+                <img class='' src="{{ entry.image.one().url }}" alt="{{ entry.title }}">
+            </article>
+        {% endif %}
+
+        <a href="{{ siteUrl }}projects">← Terug</a>
+    </section>
+{% endblock %}

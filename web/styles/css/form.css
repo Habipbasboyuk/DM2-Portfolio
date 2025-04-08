@@ -1,0 +1,32 @@
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem 0rem;
+    gap: 0.5rem;
+}
+
+.form-group__label {
+    letter-spacing: 0.1rem;
+}
+
+.form-group__input {
+    padding: 0.2rem;
+    border-radius: var(--radius-s);
+    border: none;
+    &:focus-visible {
+        outline: 2px solid var(--accent-color);
+        outline-style: auto;
+    }
+}
+
+.form-group__button {
+    cursor: pointer;
+    border-radius: var(--radius-s);
+    padding: 0.8rem;
+    font-size: var(--font-size-m);
+    color: var(--text-color);
+    font-weight: 500;
+    background-color: var(--accent-color);
+    border: none;
+    box-shadow: 3px 3px 11px 1px rgba(0, 0, 0, 0.3);
+}

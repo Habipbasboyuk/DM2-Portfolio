@@ -1,0 +1,44 @@
+{% extends "_layouts/base" %}
+
+{% block content %}
+	<header>
+		{% include './partials/nav.twig' %}
+	</header>
+	<main>
+<section class="container">
+    {% set projectPage = craft.entries.section('projectPage') %}
+    {% for item in projectPage %}
+        <article class="container__article header">
+            <h1 class="article__title article__title--big article__title--centered">{{ item.title }}</h1>
+        </article>
+        <article class="container__article">
+            <h2 class="article__title">{{ item.heading }}</h2>
+            <p class="article__text">{{ item.description }}</p>
+        </article>
+    {% endfor %}
+
+	{% if entry.section.handle == 'projectPage' %}
+		{% set items = craft.entries.section('projects') %}
+    {% else %}
+        {% set items = craft.entries.section('skills') %}
+    {% endif %}
+
+    {% for item in items %}
+    {% if entry.section.handle == 'projectPage' %}
+        <a href="{{ item.url }}">
+    {% endif %}
+        <article class="container__article container__article--card ">
+            {% set img = item.image.one() %}
+            {% if img %}
+                <img src="{{ img.url }}" alt="{{ img.title }}">
+            {% endif %}
+        </article>
+    {% if entry.section.handle == 'projectPage' %}
+        </a>
+    {% endif %}
+
+    {% endfor %}
+</section>
+	</main>
+
+{% endblock %}

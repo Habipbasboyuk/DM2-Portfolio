@@ -1,0 +1,28 @@
+defaultPlacement: end
+enableVersioning: true
+entryTypes:
+  -
+    uid: 00bb6892-c9eb-48a7-a7ce-b9da7fa7f3c2 # contactPage
+handle: contactPage
+maxAuthors: 1
+name: 'Contact page'
+previewTargets:
+  -
+    __assoc__:
+      -
+        - label
+        - 'Primary entry page'
+      -
+        - urlFormat
+        - '{url}'
+      -
+        - refresh
+        - '1'
+propagationMethod: all
+siteSettings:
+  14082bfa-b4e4-47b8-9863-ca1976106187: # Portfolio - Habip Basboyuk
+    enabledByDefault: true
+    hasUrls: true
+    template: _pages/_contact.twig
+    uriFormat: contact-page
+type: single

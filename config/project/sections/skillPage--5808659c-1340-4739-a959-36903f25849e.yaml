@@ -1,0 +1,31 @@
+defaultPlacement: end
+enableVersioning: true
+entryTypes:
+  -
+    uid: 5944be25-c46f-4c37-bdb0-be37d7234ae4 # Info
+handle: skillPage
+maxAuthors: 1
+name: 'Skill page'
+previewTargets:
+  -
+    __assoc__:
+      -
+        - label
+        - 'Primary entry page'
+      -
+        - urlFormat
+        - '{url}'
+      -
+        - refresh
+        - '1'
+propagationMethod: all
+siteSettings:
+  14082bfa-b4e4-47b8-9863-ca1976106187: # Portfolio - Habip Basboyuk
+    enabledByDefault: true
+    hasUrls: true
+    template: _layouts/overview.twig
+    uriFormat: skills
+structure:
+  maxLevels: null
+  uid: 51c20c27-e66e-4d93-a515-d2a998012b95
+type: structure

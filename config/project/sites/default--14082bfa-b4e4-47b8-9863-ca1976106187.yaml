@@ -1,0 +1,8 @@
+baseUrl: $PRIMARY_SITE_URL
+handle: default
+hasUrls: true
+language: en-US
+name: 'Portfolio - Habip Basboyuk'
+primary: true
+siteGroup: e24555e5-cbf7-4f7d-a9e1-e52cddfdd4f7 # Portfolio - Habip Basboyuk
+sortOrder: 1

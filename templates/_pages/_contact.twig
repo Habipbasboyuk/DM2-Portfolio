@@ -1,0 +1,101 @@
+{% extends "_layouts/base" %}
+
+{% block content %}
+    {% include "./partials/nav.twig" %}
+    
+        <main class='contact-page'>
+
+        <section class="container">
+
+        {% set contactPage = craft.entries.section('contactPage') %}
+        {% if contactPage|length %}
+            {% for item in contactPage %}
+            <article class="container__article header">
+                <h1 class="article__title article__title--big article__title--centered">{{item.title}}</h1>
+            </article>
+
+            <article class="container__article grid-article1">
+                <h2 class="article__title">{{item.heading}}</h2>
+
+                <div class="contact__info">
+                {% set image = item.image.one() %}
+                    <img class="contact__icon" src="{{ image.url }}" alt="telephone">
+                    <div>
+                        <p>{{item.plainText}}</p> <a href="tel:{{item.numbers}}">{{item.numbers}}</a>
+                    </div>
+                </div>
+
+                <div class="contact__info">
+                {% set image = item.image2.one() %}
+                    <img class="contact__icon" src="{{ image.url }}" alt="email">
+                    <div>
+                        <p>{{item.plainText2}}</p> <a href="mailto: {{item.email}}">{{item.email}}</a>
+                    </div>
+                </div>
+
+                <div class="socials-container">
+                    <h2 class="socials-container__header">Follow me!</h2>
+                    <div class="socials-container__icons">
+                    {% set image = item.image3.one() %}
+                        <a target="_blank" class="socials-container__link" href="{{image.title}}"><img class="contact__icon"
+                                src="{{image.url}}" alt="instagram"></a>
+
+                    {% set image = item.image4.one() %}
+                        <a target="_blank" class="socials-container__link" href="{{image.title}}"><img class="contact__icon"
+                                src="{{image.url}}" alt="facebook"></a>
+
+                    {% set image = item.image5.one() %}
+                        <a target="_blank" class="socials-conimage.urltainer__link" href="{{image.title}}"><img class="contact__icon"
+                                src="{{image.url}}" alt="linkedin"></a>
+                    </div>
+                </div>
+            </article>
+<article class="container__article grid-article2">
+    <form method="post" accept-charset="UTF-8" class="form">
+        {{ csrfInput() }}
+        <input type="hidden" name="action" value="contact-form/send">
+
+        <div class="form-group">
+            <label class="form-group__label" for="fromName">Name:</label>
+            <input class="form-group__input" type="text" id="fromName" name="fromName" required>
+
+        </div>
+
+        <div class="form-group">
+            <label class="form-group__label" for="fromEmail">Email:</label>
+            <input class="form-group__input" type="email" id="fromEmail" name="fromEmail" required>
+
+        </div>
+
+        <div class="form-group">
+            <label class="form-group__label" for="message">Message:</label>
+            <textarea class="form-group__input" id="message" name="message" rows="4" required></textarea>
+        </div>
+
+        <div class="form-group">
+            <button type="submit" class="form-group__button">Submit</button>
+        </div>
+    </form>
+</article>
+
+{% if craft.app.session.hasFlash('notice') %}
+    <dialog id="contactDialog" open>
+        <p>{{ craft.app.session.getFlash('notice') }}</p>
+        <button onclick="this.closest('dialog').close()">Close</button>
+    </dialog>
+{% elseif craft.app.session.hasFlash('error') %}
+    <dialog id="contactDialog" open>
+        <p>Error: {{ craft.app.session.getFlash('error') }}</p>
+        <button onclick="this.closest('dialog').close()">Close</button>
+    </dialog>
+{% endif %}
+            {% endfor %}
+        {% else %}
+            <p>No contact information available at the moment.</p>
+        {% endif %}
+        </section>
+
+
+    </main>
+    
+{% endblock %}

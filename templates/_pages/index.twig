@@ -1,0 +1,32 @@
+{% extends "_layouts/base" %}
+
+{% block content %}
+
+
+    <header>
+
+            {% include './partials/nav.twig' %};
+
+    </header>
+    <main>
+        <section class="container">
+
+            {% set home = craft.entries.section('homePage').all() %}
+            {% for item in home %}
+            <article class="container__article header grid-header" >
+                <h1 class="article__title article__title--big article__title--centered"> {{item.pagetitle}}</h1>
+            </article>
+            <article class="container__article grid-article1" >
+                    <p>{{ item.richText }}</p>
+            </article>
+    
+            <article class="container__article grid-article2" >
+                <p>{{ item.richText2 }}</p>
+            </article>
+    
+            {% endfor %}
+        </section>
+
+    </main>
+
+{% endblock %}

@@ -1,0 +1,28 @@
+defaultPlacement: end
+enableVersioning: true
+entryTypes:
+  -
+    uid: 3d866530-4836-4eb8-a5aa-570fa70ca4f6 # Home Info
+handle: homePage
+maxAuthors: 1
+name: 'Home Page'
+previewTargets:
+  -
+    __assoc__:
+      -
+        - label
+        - 'Primary entry page'
+      -
+        - urlFormat
+        - '{url}'
+      -
+        - refresh
+        - '1'
+propagationMethod: all
+siteSettings:
+  14082bfa-b4e4-47b8-9863-ca1976106187: # Portfolio - Habip Basboyuk
+    enabledByDefault: true
+    hasUrls: true
+    template: _pages/index.twig
+    uriFormat: __home__
+type: single

@@ -1,0 +1,33 @@
+defaultPlacement: end
+enableVersioning: true
+entryTypes:
+  -
+    uid: 76a10a9c-5413-4b3f-be22-0031f1bce883 # Navigation
+  -
+    uid: 3578b5c4-3eee-4f81-b25e-f3c3f452e62f # ProfilePicture
+handle: navigation
+maxAuthors: 1
+name: Navigation
+previewTargets:
+  -
+    __assoc__:
+      -
+        - label
+        - 'Primary entry page'
+      -
+        - urlFormat
+        - '{url}'
+      -
+        - refresh
+        - '1'
+propagationMethod: all
+siteSettings:
+  14082bfa-b4e4-47b8-9863-ca1976106187: # Portfolio - Habip Basboyuk
+    enabledByDefault: true
+    hasUrls: true
+    template: navigation/_entry.twig
+    uriFormat: 'navigation/{slug}'
+structure:
+  maxLevels: null
+  uid: 6127580e-5a41-494b-9e01-0c5ac4a0abdc
+type: structure

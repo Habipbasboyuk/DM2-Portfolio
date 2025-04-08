@@ -1,0 +1,30 @@
+columnSuffix: null
+handle: project
+instructions: null
+name: project
+searchable: false
+settings:
+  createButtonLabel: null
+  defaultIndexViewMode: cards
+  entryTypes:
+    -
+      __assoc__:
+        -
+          - uid
+          - 937e9aff-6c16-470a-896d-54f552cdedc5 # Projects
+    -
+      __assoc__:
+        -
+          - uid
+          - c2b1eb55-a645-4283-ae65-d20728d71960
+  includeTableView: false
+  maxEntries: null
+  minEntries: null
+  pageSize: 50
+  propagationKeyFormat: null
+  propagationMethod: all
+  showCardsInGrid: false
+  viewMode: cards
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Matrix

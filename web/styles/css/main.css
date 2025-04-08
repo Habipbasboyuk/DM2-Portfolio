@@ -1,0 +1,135 @@
+@import url('navbar.css');
+@import url('article.css');
+@import url('cards.css');
+@import url('contact.css');
+@import url('form.css');
+@import url('grid.css');
+@import url('detail.css');
+
+
+:root {
+    --bg-color: #2D2B2B;
+    --fg-color: #323131;
+
+    --margin-nav: 10rem;
+    --margin-s: 0.5rem;
+    --margin-m: 1rem;
+    --margin-l: 2rem;
+
+    --padding-s: var(--margin-s);
+    --padding-m: var(--margin-m);
+    --padding-l: var(--margin-l);
+
+    --text-color: #fff;
+    --title-font: 'Albert Sans', sans-serif;
+    --text-font: 'Playfair';
+    --accent-color: #fd783f;
+
+    --font-size-s: 0.8rem;
+    --font-size-m: 1rem;
+    --font-size-l: 1.5rem;
+    --font-size-xl: 2rem;
+    --font-size-xxl: 3rem;
+
+
+    --radius-s: 5px;
+    --radius-m: 15px;
+    --radius-l: 25px;
+}
+
+.light-mode {
+    --bg-color: #eae4e4;
+    --fg-color: #d1caca;
+    --text-color: #000;
+    --accent-color: var(--bg-color);
+}
+
+.go-main {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    z-index: 1000;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    padding: var(--padding-s);
+    border-radius: var(--radius-s);
+    text-decoration: none;
+    transition: top 0.3s ease;
+
+    &:focus {
+        top: 0;
+        outline: 2px solid var(--accent-color);
+    }
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    overflow: hidden;
+}
+
+body {
+    overflow-y: auto;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+a, h1, h2, label, input, button {
+    font-family: var(--title-font);
+    font-weight: 200;
+}
+
+ p {
+    font-family: var(--text-font);
+    font-weight: 300;
+}
+
+a, p, h1, h2, label {
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+body {
+    background-color: var(--bg-color);
+}
+
+dialog {
+    border: none;
+    border-radius: var(--radius-m);
+    padding: var(--padding-m);
+    background-color: var(--fg-color);
+    color: var(--text-color);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+dialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+
+@media(min-width: 50rem) {
+    body {
+       display: flex;
+       height: 100%;
+    }
+
+    main {
+        flex-grow: 1;
+    }
+}
+
+
+
+
+
+
+
+
